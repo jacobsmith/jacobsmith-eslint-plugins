@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jacobsmith-custom",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A collection of eslint rules customized for the programming styles of Jacob Smith.",
   "keywords": [
     "eslint",
