@@ -14,12 +14,18 @@ const rule = require('../../../lib/rules/alphabetize-object-keys');
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2018, sourceType: 'module' } });
 ruleTester.run('alphabetize-object-keys', rule, {
   valid: [
     '{}',
     "module.exports = { alpha: 'one', bravo: 'bravo' }",
     "module.exports = { alpha: { charlie: 'charlie', delta: 'delta' }, bravo: 'bravo' }",
+    {
+      code: [
+        "var alpha = { alpha: 'alpha' }",
+        "module.exports = { bravo: 'bravo', ...alpha }"
+      ].join("\n")
+    },
   ],
   invalid: [
     {
