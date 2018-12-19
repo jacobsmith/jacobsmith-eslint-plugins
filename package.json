@@ -7,6 +7,8 @@
     "eslintplugin",
     "eslint-plugin"
   ],
+  "repository": "https://github.com/jacobsmith/jacobsmith-eslint-plugins",
+  "website": "https://github.com/jacobsmith/jacobsmith-eslint-plugins",
   "author": "Jacob Smith",
   "main": "lib/index.js",
   "scripts": {
